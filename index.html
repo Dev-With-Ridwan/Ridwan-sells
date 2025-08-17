@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ADEDINI RIDWAN | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</head>
+<body>
+    <header>
+        <div class="logo">RIDWANSELLS</div>
+        <div class="hamburger" id="hamburger-icon">
+            <ion-icon name="menu-outline"></ion-icon>
+        </div>
+        <nav class="nav-menu" id="nav-menu">
+            <ul>
+                <li><a href="#hero">Me</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#tools">Tools</a></li>
+                <li><a href="#hire-me">Why Hire Me</a></li>
+                <li class="works-dropdown-toggle">
+                    <a href="#works">Works <ion-icon name="chevron-down-outline"></ion-icon></a>
+                    <ul class="works-dropdown-menu">
+                        <li><a href="#" data-category="ads">Ads Creatives</a></li>
+                        <li><a href="#" data-category="social">Social Media Designs</a></li>
+                        <li><a href="#" data-category="results">Results</a></li>
+                    </ul>
+                </li>
+                <li><a href="#resources">Free Resources</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero" class="hero-section">
+            <div class="hero-content">
+                <img src="https://via.placeholder.com/150" alt="Profile Picture" class="profile-pic">
+                <h1>ADEDINI RIDWAN</h1>
+                <h2>BRAND MARKETER | Ads, Email, SEO, Social Media Marketing, and Landing Pages</h2>
+            </div>
+        </section>
+
+        <section id="about" class="about-section">
+            <h2>About</h2>
+            <div class="about-carousel-container">
+                <div class="about-carousel-inner">
+                    <div class="about-page">
+                        <p>Page 1: A brief introduction to who I am and my journey into marketing.</p>
+                    </div>
+                    <div class="about-page">
+                        <p>Page 2: My core philosophy on brand building and audience engagement.</p>
+                    </div>
+                    <div class="about-page">
+                        <p>Page 3: The passion that drives me to create impactful campaigns.</p>
+                    </div>
+                    <div class="about-page">
+                        <p>Page 4: A deeper look into the problems I love solving for businesses.</p>
+                    </div>
+                    <div class="about-page">
+                        <p>Page 5: My vision for the future of digital marketing.</p>
+                    </div>
+                </div>
+                <div class="carousel-dots"></div>
+            </div>
+            <a href="#contact" class="cta-button">Hire Me</a>
+        </section>
+
+        <section id="skills" class="skills-section">
+            <h2>Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <div class="skill-card-inner">
+                        <div class="skill-card-front">
+                            <h3>Paid Advertising</h3>
+                        </div>
+                        <div class="skill-card-back">
+                            <p>Expert in creating and managing high-ROI ad campaigns on various platforms.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-card-inner">
+                        <div class="skill-card-front">
+                            <h3>Content Marketing</h3>
+                        </div>
+                        <div class="skill-card-back">
+                            <p>Crafting engaging organic content and video strategies to grow brand presence.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-card-inner">
+                        <div class="skill-card-front">
+                            <h3>Email Marketing</h3>
+                        </div>
+                        <div class="skill-card-back">
+                            <p>Designing effective email funnels and newsletters that convert leads into customers.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-card-inner">
+                        <div class="skill-card-front">
+                            <h3>Landing Page Optimization</h3>
+                        </div>
+                        <div class="skill-card-back">
+                            <p>Improving user experience and conversion rates on landing pages.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="tools" class="tools-section">
+            <h2>Tools</h2>
+            <div class="tools-grid">
+                <div class="tool-item">
+                    <img src="https://via.placeholder.com/50/FF5733/FFFFFF?text=PS" alt="Photoshop">
+                    <p>Photoshop</p>
+                </div>
+                <div class="tool-item">
+                    <img src="https://via.placeholder.com/50/3498DB/FFFFFF?text=Ca" alt="Canva">
+                    <p>Canva</p>
+                </div>
+                <div class="tool-item">
+                    <img src="https://via.placeholder.com/50/27AE60/FFFFFF?text=Fi" alt="Figma">
+                    <p>Figma</p>
+                </div>
+                <div class="tool-item">
+                    <img src="https://via.placeholder.com/50/F39C12/FFFFFF?text=ME" alt="Mailchimp">
+                    <p>Mailchimp</p>
+                </div>
+                <div class="tool-item">
+                    <img src="https://via.placeholder.com/50/8E44AD/FFFFFF?text=GA" alt="Google Analytics">
+                    <p>Google Analytics</p>
+                </div>
+                <div class="tool-item">
+                    <img src="https://via.placeholder.com/50/1ABC9C/FFFFFF?text=SE" alt="SEMRush">
+                    <p>SEMRush</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="works" class="works-section">
+            <h2>Works</h2>
+            <div class="works-tabs">
+                <button class="works-tab active" data-category="ads">Ads Creatives</button>
+                <button class="works-tab" data-category="social">Social Media Designs</button>
+                <button class="works-tab" data-category="results">Results</button>
+            </div>
+            <div class="works-gallery-container">
+                <div class="works-gallery" id="ads-creatives">
+                    <img src="https://via.placeholder.com/300" alt="Ad Creative 1">
+                    <img src="https://via.placeholder.com/300" alt="Ad Creative 2">
+                    <img src="https://via.placeholder.com/300" alt="Ad Creative 3">
+                </div>
+                <div class="works-gallery hidden" id="social-media-designs">
+                    <img src="https://via.placeholder.com/300/F39C12" alt="Social Media Design 1">
+                    <img src="https://via.placeholder.com/300/F39C12" alt="Social Media Design 2">
+                </div>
+                <div class="works-gallery hidden" id="results">
+                    <img src="https://via.placeholder.com/300/1ABC9C" alt="Results 1">
+                    <img src="https://via.placeholder.com/300/1ABC9C" alt="Results 2">
+                </div>
+            </div>
+        </section>
+
+        <section id="hire-me" class="hire-me-section">
+            <h2>Why You Should Hire Me</h2>
+            <div class="hire-me-content">
+                <p>I'm not just a marketer; I'm a growth partner. I blend creativity with data-driven strategy to deliver tangible results. My unique approach ensures your brand not only stands out but also connects with your audience on a deeper level, transforming clicks into customers.</p>
+            </div>
+        </section>
+
+        <section id="testimonials" class="testimonials-section">
+            <h2>Testimonials</h2>
+            <div class="testimonials-carousel-container">
+                <div class="testimonials-carousel-inner">
+                    <div class="testimonial-card glassmorphism-card">
+                        <div class="client-info">
+                            <img src="https://via.placeholder.com/50" alt="Client 1" class="client-pic">
+                            <p class="client-name">John Doe</p>
+                        </div>
+                        <p class="testimonial-text">"Ridwan's work on our social media ads was phenomenal. We saw a 200% increase in our conversion rate. Highly recommend!"</p>
+                    </div>
+                    <div class="testimonial-card glassmorphism-card">
+                        <div class="client-info">
+                            <img src="https://via.placeholder.com/50" alt="Client 2" class="client-pic">
+                            <p class="client-name">Jane Smith</p>
+                        </div>
+                        <p class="testimonial-text">"His email marketing strategy was a game-changer for our business. The results speak for themselves."</p>
+                    </div>
+                    <div class="testimonial-card video-card">
+                        <a href="https://www.youtube.com/embed/dQw4w9WgXcQ" class="video-thumbnail-link" data-video>
+                            <img src="https://via.placeholder.com/300x200" alt="Video Testimonial Thumbnail">
+                            <ion-icon name="play-circle-outline" class="play-icon"></ion-icon>
+                        </a>
+                    </div>
+                </div>
+                <div class="carousel-dots"></div>
+            </div>
+        </section>
+
+        <section id="resources" class="resources-section">
+            <h2>Free Resources</h2>
+            <div class="resources-grid">
+                <div class="resource-item">
+                    <h3>Social Media Content Calendar Template</h3>
+                    <div class="resource-details hidden">
+                        <p>Download my proven content calendar template to plan your social media strategy like a pro.</p>
+                        <a href="#" class="download-button">Download Now</a>
+                    </div>
+                </div>
+                <div class="resource-item">
+                    <h3>Guide to Basic SEO</h3>
+                    <div class="resource-details hidden">
+                        <p>A comprehensive guide for beginners on how to optimize your website for search engines.</p>
+                        <a href="#" class="download-button">Download Now</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact-section">
+            <h2>Contact</h2>
+            <form id="contact-form">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="submit-button">Send Message</button>
+                <div id="form-message" class="form-message"></div>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="social-icons">
+                <a href="mailto:adediniridwan@example.com" aria-label="Email"><ion-icon name="mail-outline"></ion-icon></a>
+                <a href="https://www.linkedin.com/in/adediniridwan" aria-label="LinkedIn"><ion-icon name="logo-linkedin"></ion-icon></a>
+                <a href="tel:+1234567890" aria-label="Phone"><ion-icon name="call-outline"></ion-icon></a>
+            </div>
+            <p>&copy; 2025 ADEDINI RIDWAN. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js">document.addEventListener('DOMContentLoaded', () => {
+    // Hamburger Menu
+    const hamburger = document.getElementById('hamburger-icon');
+    const navMenu = document.getElementById('nav-menu');
+    const navLinks = document.querySelectorAll('.nav-menu a');
+    const worksDropdownToggle = document.querySelector('.works-dropdown-toggle');
+    const worksDropdownMenu = document.querySelector('.works-dropdown-menu');
+
+    // Toggle hamburger menu
+    hamburger.addEventListener('click', () => {
+        navMenu.classList.toggle('open');
+    });
+
+    // Close menu when clicking a link
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            navMenu.classList.remove('open');
+        });
+    });
+
+    // Close menu when clicking outside
+    document.addEventListener('click', (e) => {
+        if (!navMenu.contains(e.target) && !hamburger.contains(e.target)) {
+            navMenu.classList.remove('open');
+        }
+    });
+
+    // Mobile dropdown toggle for Works
+    worksDropdownToggle.addEventListener('click', (e) => {
+        if (window.innerWidth < 768) {
+            e.preventDefault();
+            worksDropdownMenu.classList.toggle('show');
+        }
+    });
+
+    // Desktop dropdown for Works
+    worksDropdownToggle.addEventListener('mouseover', () => {
+        if (window.innerWidth >= 768) {
+            worksDropdownMenu.classList.add('show');
+        }
+    });
+
+    worksDropdownToggle.addEventListener('mouseout', () => {
+        if (window.innerWidth >= 768) {
+            worksDropdownMenu.classList.remove('show');
+        }
+    });
+
+    // About Section Carousel
+    const aboutCarousel = document.querySelector('.about-carousel-inner');
+    const aboutPages = document.querySelectorAll('.about-page');
+    const aboutDotsContainer = document.querySelector('.about-section .carousel-dots');
+    let currentIndex = 0;
+
+    aboutPages.forEach((_, index) => {
+        const dot = document.createElement('span');
+        dot.classList.add('dot');
+        if (index === 0) dot.classList.add('active');
+        dot.addEventListener('click', () => {
+            currentIndex = index;
+            updateAboutCarousel();
+        });
+        aboutDotsContainer.appendChild(dot);
+    });
+
+    function updateAboutCarousel() {
+        const offset = -currentIndex * 100;
+        aboutCarousel.style.transform = `translateX(${offset}%)`;
+        document.querySelectorAll('.about-section .dot').forEach(dot => dot.classList.remove('active'));
+        document.querySelectorAll('.about-section .dot')[currentIndex].classList.add('active');
+    }
+
+    // Swipe functionality for About Section
+    let startX = 0;
+    aboutCarousel.addEventListener('touchstart', (e) => {
+        startX = e.touches[0].clientX;
+    });
+
+    aboutCarousel.addEventListener('touchend', (e) => {
+        const endX = e.changedTouches[0].clientX;
+        const diffX = startX - endX;
+        if (diffX > 50 && currentIndex < aboutPages.length - 1) {
+            currentIndex++;
+        } else if (diffX < -50 && currentIndex > 0) {
+            currentIndex--;
+        }
+        updateAboutCarousel();
+    });
+
+    // Skill Card Flip
+    document.querySelectorAll('.skill-card').forEach(card => {
+        card.addEventListener('click', () => {
+            card.classList.toggle('flipped');
+        });
+    });
+
+    // Works Tabs
+    const worksTabs = document.querySelectorAll('.works-tab');
+    const worksGalleries = document.querySelectorAll('.works-gallery');
+    worksTabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+            worksTabs.forEach(t => t.classList.remove('active'));
+            tab.classList.add('active');
+
+            const category = tab.dataset.category;
+            worksGalleries.forEach(gallery => {
+                if (gallery.id === `${category}-creatives` || gallery.id === `${category}-designs` || gallery.id === category) {
+                    gallery.classList.remove('hidden');
+                } else {
+                    gallery.classList.add('hidden');
+                }
+            });
+        });
+    });
+
+    // Testimonials Carousel
+    const testimonialsCarousel = document.querySelector('.testimonials-carousel-inner');
+    const testimonialCards = document.querySelectorAll('.testimonial-card');
+    const testimonialsDotsContainer = document.querySelector('.testimonials-section .carousel-dots');
+    let testimonialIndex = 0;
+
+    testimonialCards.forEach((_, index) => {
+        const dot = document.createElement('span');
+        dot.classList.add('dot');
+        if (index === 0) dot.classList.add('active');
+        dot.addEventListener('click', () => {
+            testimonialIndex = index;
+            updateTestimonialsCarousel();
+        });
+        testimonialsDotsContainer.appendChild(dot);
+    });
+
+    function updateTestimonialsCarousel() {
+        const offset = -testimonialIndex * 100;
+        testimonialsCarousel.style.transform = `translateX(${offset}%)`;
+        document.querySelectorAll('.testimonials-section .dot').forEach(dot => dot.classList.remove('active'));
+        document.querySelectorAll('.testimonials-section .dot')[testimonialIndex].classList.add('active');
+    }
+
+    // Swipe functionality for Testimonials
+    let startXTest = 0;
+    testimonialsCarousel.addEventListener('touchstart', (e) => {
+        startXTest = e.touches[0].clientX;
+    });
+
+    testimonialsCarousel.addEventListener('touchend', (e) => {
+        const endXTest = e.changedTouches[0].clientX;
+        const diffXTest = startXTest - endXTest;
+        if (diffXTest > 50 && testimonialIndex < testimonialCards.length - 1) {
+            testimonialIndex++;
+        } else if (diffXTest < -50 && testimonialIndex > 0) {
+            testimonialIndex--;
+        }
+        updateTestimonialsCarousel();
+    });
+
+    // Free Resources Toggle
+    document.querySelectorAll('.resource-item').forEach(item => {
+        item.addEventListener('click', (e) => {
+            if (e.target.closest('.download-button')) return; // Prevent toggle when clicking download button
+            const details = item.querySelector('.resource-details');
+            details.classList.toggle('hidden');
+        });
+    });
+
+    // Contact Form Submission
+    const contactForm = document.getElementById('contact-form');
+    const formMessage = document.getElementById('form-message');
+
+    contactForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const formData = new FormData(contactForm);
+        const name = formData.get('name');
+        const email = formData.get('email');
+        const message = formData.get('message');
+
+        // Placeholder for form submission (e.g., send to a server)
+        console.log('Form submitted:', { name, email, message });
+
+        // Display success message
+        formMessage.textContent = 'Message sent successfully!';
+        formMessage.classList.add('success');
+        formMessage.classList.remove('error');
+
+        // Reset form
+        contactForm.reset();
+
+        // Clear message after 3 seconds
+        setTimeout(() => {
+            formMessage.textContent = '';
+            formMessage.classList.remove('success');
+        }, 3000);
+    });
+});</script>
+</body>
+</html>
