@@ -5,43 +5,44 @@ document.addEventListener('DOMContentLoaded', () => {
     const navLinks = document.querySelectorAll('.nav-menu a');
     const worksDropdownToggle = document.querySelector('.works-dropdown-toggle');
     const worksDropdownMenu = document.querySelector('.works-dropdown-menu');
+    const worksLink = document.querySelector('.dropdown-toggle');
 
     // Toggle hamburger menu
     hamburger.addEventListener('click', () => {
         navMenu.classList.toggle('open');
+        worksDropdownMenu.classList.remove('show'); // Close dropdown when menu toggles
     });
 
-    // Close menu when clicking a link
+    // Handle Works link click for navigation
+    worksLink.addEventListener('click', (e) => {
+        if (!worksDropdownMenu.classList.contains('show')) {
+            // Navigate to #works if dropdown is not open
+            window.location.href = worksLink.getAttribute('href');
+        } else {
+            // Prevent navigation if dropdown is open
+            e.preventDefault();
+        }
+        worksDropdownMenu.classList.toggle('show'); // Toggle dropdown
+    });
+
+    // Close menu and dropdown when clicking a nav link
     navLinks.forEach(link => {
-        link.addEventListener('click', () => {
-            navMenu.classList.remove('open');
+        link.addEventListener('click', (e) => {
+            if (link !== worksLink && !link.closest('.works-dropdown-menu')) {
+                navMenu.classList.remove('open');
+                worksDropdownMenu.classList.remove('show');
+            }
+            if (link.closest('.works-dropdown-menu')) {
+                navMenu.classList.remove('open');
+                worksDropdownMenu.classList.remove('show');
+            }
         });
     });
 
-    // Close menu when clicking outside
+    // Close menu and dropdown when clicking outside
     document.addEventListener('click', (e) => {
-        if (!navMenu.contains(e.target) && !hamburger.contains(e.target)) {
+        if (!navMenu.contains(e.target) && !hamburger.contains(e.target) && !worksDropdownToggle.contains(e.target)) {
             navMenu.classList.remove('open');
-        }
-    });
-
-    // Mobile dropdown toggle for Works
-    worksDropdownToggle.addEventListener('click', (e) => {
-        if (window.innerWidth < 768) {
-            e.preventDefault();
-            worksDropdownMenu.classList.toggle('show');
-        }
-    });
-
-    // Desktop dropdown for Works
-    worksDropdownToggle.addEventListener('mouseover', () => {
-        if (window.innerWidth >= 768) {
-            worksDropdownMenu.classList.add('show');
-        }
-    });
-
-    worksDropdownToggle.addEventListener('mouseout', () => {
-        if (window.innerWidth >= 768) {
             worksDropdownMenu.classList.remove('show');
         }
     });
@@ -161,34 +162,5 @@ document.addEventListener('DOMContentLoaded', () => {
             const details = item.querySelector('.resource-details');
             details.classList.toggle('hidden');
         });
-    });
-
-    // Contact Form Submission
-    const contactForm = document.getElementById('contact-form');
-    const formMessage = document.getElementById('form-message');
-
-    contactForm.addEventListener('submit', (e) => {
-        e.preventDefault();
-        const formData = new FormData(contactForm);
-        const name = formData.get('name');
-        const email = formData.get('email');
-        const message = formData.get('message');
-
-        // Placeholder for form submission (e.g., send to a server)
-        console.log('Form submitted:', { name, email, message });
-
-        // Display success message
-        formMessage.textContent = 'Message sent successfully!';
-        formMessage.classList.add('success');
-        formMessage.classList.remove('error');
-
-        // Reset form
-        contactForm.reset();
-
-        // Clear message after 3 seconds
-        setTimeout(() => {
-            formMessage.textContent = '';
-            formMessage.classList.remove('success');
-        }, 3000);
     });
 });
