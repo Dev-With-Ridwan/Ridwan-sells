@@ -137,6 +137,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         item.style.transform = 'translateX(100%)';
                         item.classList.remove('active');
                     });
+                    currentGalleryIndex[gallery.id] = 0;
                 }
             });
         });
@@ -174,6 +175,56 @@ document.addEventListener('DOMContentLoaded', () => {
     // Initialize the first gallery
     const initialGallery = document.querySelector('.works-gallery-grid:not(.hidden)');
     if (initialGallery) startAutoSlide(initialGallery);
+
+    // Swipe functionality for Works Galleries
+    worksGalleries.forEach(gallery => {
+        let swipeStartX = 0;
+        gallery.addEventListener('touchstart', (e) => {
+            swipeStartX = e.touches[0].clientX;
+        });
+
+        gallery.addEventListener('touchend', (e) => {
+            const swipeEndX = e.changedTouches[0].clientX;
+            const diffX = swipeStartX - swipeEndX;
+            const items = gallery.querySelectorAll('.gallery-item');
+            if (diffX > 50 && currentGalleryIndex[gallery.id] < items.length - 1) {
+                currentGalleryIndex[gallery.id]++;
+                updateGalleryCarousel(gallery);
+            } else if (diffX < -50 && currentGalleryIndex[gallery.id] > 0) {
+                currentGalleryIndex[gallery.id]--;
+                updateGalleryCarousel(gallery);
+            }
+            console.log('Swipe detected in gallery:', gallery.id, 'New index:', currentGalleryIndex[gallery.id]); // Debug
+        });
+    });
+
+    // Navigation Arrows for Works Gallery
+    const galleryPrev = document.createElement('button');
+    galleryPrev.classList.add('gallery-prev');
+    galleryPrev.innerHTML = '<ion-icon name="chevron-back-outline"></ion-icon>';
+    const galleryNext = document.createElement('button');
+    galleryNext.classList.add('gallery-next');
+    galleryNext.innerHTML = '<ion-icon name="chevron-forward-outline"></ion-icon>';
+    document.querySelector('.works-gallery-container').appendChild(galleryPrev);
+    document.querySelector('.works-gallery-container').appendChild(galleryNext);
+
+    galleryPrev.addEventListener('click', () => {
+        const activeGallery = document.querySelector('.works-gallery-grid:not(.hidden)');
+        if (activeGallery) {
+            currentGalleryIndex[activeGallery.id] = (currentGalleryIndex[activeGallery.id] - 1 + activeGallery.querySelectorAll('.gallery-item').length) % activeGallery.querySelectorAll('.gallery-item').length;
+            updateGalleryCarousel(activeGallery);
+            console.log('Previous arrow clicked:', activeGallery.id, 'New index:', currentGalleryIndex[activeGallery.id]); // Debug
+        }
+    });
+
+    galleryNext.addEventListener('click', () => {
+        const activeGallery = document.querySelector('.works-gallery-grid:not(.hidden)');
+        if (activeGallery) {
+            currentGalleryIndex[activeGallery.id] = (currentGalleryIndex[activeGallery.id] + 1) % activeGallery.querySelectorAll('.gallery-item').length;
+            updateGalleryCarousel(activeGallery);
+            console.log('Next arrow clicked:', activeGallery.id, 'New index:', currentGalleryIndex[activeGallery.id]); // Debug
+        }
+    });
 
     // Lightbox Modal for Works Gallery
     const modal = document.createElement('div');
