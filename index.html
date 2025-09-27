@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marketing Automation Specialist Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="fontawesome-free-7.0.1-web/fontawesome-free-7.0.1-web/css/all.min.css">
+</head>
+<body>
+    <nav class="nav">
+        <div class="nav-brand">Ridwansells</div>
+        <div class="hamburger">☰</div>
+        <ul class="nav-menu">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#works">Works</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#why-choose">Why Choose Me</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section (Redesigned, No Gradient) -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>Are you ready to <strong class="headline">Save time, Increase ROI and Build loyal customer base??</strong></h1>
+            <p>Transform Your Business with Marketing Automation, Email Marketing & Development, and CRM</p>
+            <div class="cta-buttons">
+                <a href="#contact" class="cta cta-primary"><i class="fas fa-check"></i> Claim Free Audit</a>
+                <a href="https://calendly.com/adediniridwan/30min" target="_blank" class="cta cta-secondary">Book a Strategy session</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Past Works Section -->
+    <section class="past-works" id="works">
+        <h2>Case Studies</h2>
+        <div class="works-gallery" id="worksGallery">
+            <div class="work-item"><img src="past works/first mockup.png" alt="Work 1"><div class="work-overlay"><h3></h3></div></div>
+            <div class="work-item"><img src="assets/images/work2.jpg" alt="Work 2"><div class="work-overlay"><h3></h3></div></div>
+            <div class="work-item"><img src="assets/images/work3.jpg" alt="Work 3"><div class="work-overlay"><h3></h3></div></div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <h2>How I Grow Businessses</h2>
+        <div class="services-grid">
+            <div class="service-item"><h3>CRM & Data Management</h3><p>Your CRM is the central nervous system of your business. I set up and optimize your CRM system to ensure all customer data is clean, organized, and segmented. This gives you a clear view of your audience, helps you personalize every message, and has been proven to increase sales team efficiency by up to 30%.</p></div>
+            <div class="service-item"><h3>Marketing & Workflow Automation</h3><p>I build automated workflows that turn leads into customers without you lifting a finger. By creating intelligent sequences for every stage of the customer journey, I ensure the right message is delivered at the right time. This is how you can see a 25% increase in lead conversion and a massive boost in efficiency.</p></div>
+            <div class="service-item"><h3>Email Marketing</h3><p>I turn your email list into a powerful revenue channel. By crafting strategic campaigns that resonate and convert, I help you build customer relationships and drive consistent sales. My campaigns are designed to generate a high ROI, with many achieving a 10x return on investment or more.</p></div>
+            <div class="service-item"><h3>Email Development</h3><p>An email is only effective if it looks flawless and works everywhere. I provide the technical expertise to custom-code your campaigns, ensuring they are responsive and deliver a perfect experience on any device. This can lead to a 15% increase in mobile click-through rates and better overall engagement.</p></div>
+        </div>
+    </section>
+
+    <!-- Tools Section -->
+    <section class="tools">
+        <h2>Tools We Use</h2>
+        <div class="tools-ticker">
+            <div class="ticker-track" id="toolsTicker">
+                <div class="tool-item"><img src="Tools/hubspot.png" alt="HubSpot"><p>HubSpot</p></div>
+                <div class="tool-item"><img src="Tools/mailchimp.png" alt="Mailchimp"><p>Mailchimp</p></div>
+                <div class="tool-item"><img src="Tools/apollo.io.png" alt="Apollo"><p>Apollo</p></div>
+                <div class="tool-item"><img src="Tools/Buffer.png" alt="Figma"><p>Figma</p></div>
+                <div class="tool-item"><img src="Tools/hootsuite.png" alt="Hootsuite"><p>Hootsuite</p></div>
+                <div class="tool-item"><img src="Tools/hunter.png" alt="Hunter"><p>Hunter</p></div>
+                <div class="tool-item"><img src="Tools/klaviyo.jpeg" alt="Klaviyo"><p>Klaviyo</p></div>
+                <div class="tool-item"><img src="Tools/linkedin sales navigator.jpeg" alt="Linkedin Sales Navigator"><p>Linkedin Sales Navigator</p></div>
+                <div class="tool-item"><img src="Tools/zapier.png" alt="zapier"><p>zapier</p></div>
+                <div class="tool-item"><img src="Tools/zoho.png" alt="zoho"><p>zoho</p></div>
+                <div class="tool-item"><img src="Tools/google sheet.png" alt="google sheet"><p>Google Sheet</p></div>
+                <div class="tool-item"><img src="Tools/elementor.jpeg" alt="elementor"><p>Elementor</p></div>
+            </div>
+        </div>
+    </section>
+    <script>
+        // JavaScript for Tools Ticker Animation
+        const tickerTrack = document.getElementById('toolsTicker');
+        let tickerWidth = tickerTrack.offsetWidth;
+        let animationDuration = tickerWidth / 50; // Adjust speed here
+
+        tickerTrack.style.animation = `scroll ${animationDuration}s linear infinite`;
+
+        // CSS Keyframes for scrolling animation
+        const styleSheet = document.styleSheets[0];
+        styleSheet.insertRule(`
+            @keyframes scroll {
+                0% { transform: translateX(0); }
+                100% { transform: translateX(-${tickerWidth}px); }
+            }
+        `, styleSheet.cssRules.length);
+    </script>
+    <!-- Why Choose Me Section -->
+    <section class="why-choose" id="why-choose">
+        <h2>The Difference</h2>
+        <div class="services-grid">
+            <div class="service-item"><h3>A partner in growth</h3><p>I work as an extension of your team. I take the time to understand your unique business goals and challenges, ensuring every solution is perfectly tailored to drive your success.</p></div>
+            <div class="service-item"><h3>Measurable Results & ROI</h3><p>Every strategy I implement is designed with your bottom line in mind. My work is focused on generating a clear return on your investment, giving you tangible proof of growth.</p></div>
+            <div class="service-item"><h3>Data-Driven Decisions</h3><p>I start with a clean foundation. By optimizing your CRM & data, I ensure every campaign is built on accurate, actionable insights, leading to more effective personalization and higher conversions.</p></div>
+            <div class="service-item"><h3>Beyond the Funnel</h3><p>My expertise extends to paid ads and social media marketing, allowing me to build a truly integrated strategy. I don't just nurture leads; I can help you capture them, ensuring a seamless and effective full-funnel approach.</p></div>
+            <div class="service-item"><h3>Strategist Insight</h3><p>I start by analyzing your competitors to understand their strengths and weaknesses. This allows us to find market gaps and build a strategy that truly stands out, giving you a competitive edge.</p></div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <h2>Testimonials</h2>
+        <div class="testimonial-carousel" id="testimonialCarousel">
+            <div class="testimonial-item">
+                <img src="Testimonials/barrybree.jpg" alt="Barrybree">
+                <p>"Boosted our email open rates by 30%!"</p>
+                <h4>Barrybree Distribution</h4>
+                <button class="view-case">View Case Study</button>
+                <div class="case-study">
+                    <p>Case study details: This project involved optimizing email campaigns for a retail client, resulting in a 30% increase in open rates and 15% in conversions. We used advanced segmentation and A/B testing.</p>
+                </div>
+            </div>
+            <div class="testimonial-item">
+                <img src="Testimonials/lokalfy.jpg" alt="Lokalfy">
+                <p>"Transformed our CRM workflow."</p>
+                <h4>Lokalfy</h4>
+                <button class="view-case">View Case Study</button>
+                <div class="case-study">
+                    <p>Case study details: Implemented custom CRM integrations for a B2B company, reducing lead response time by 40% and improving customer satisfaction scores.</p>
+                </div>
+            </div>
+            <div class="testimonial-item">
+                <img src="Testimonials/NPA LOGO UPDATED-04.png" alt="Next Pro Africa">
+                <p>"Game-changer for automation."</p>
+                <h4>Next Pro Africa</h4>
+                <button class="view-case">View Case Study</button>
+                <div class="case-study">
+                    <p>Case study details: Automated marketing funnels for an e-commerce site, leading to a 25% sales uplift through personalized drip campaigns.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Me Section -->
+    <section class="about">
+        <div class="about-text">
+            <h2>About Me</h2>
+            <p>I am Adedini Ridwan by name, I help businesses save time, increase ROI, and build a loyal customer base by leveraging the power of marketing automation. My expertise in CRM & data management allows me to design intelligent workflow automation and high-converting email marketing campaigns. I also provide the technical skill of email development to ensure every message delivers results.</p>
+        </div>
+        <div class="about-image">
+            <img src="Profiles/Ridwan.jpg" alt="Adedini Ridwan">
+        </div>
+    </section>
+
+    <!-- Repeated CTAs -->
+    <section class="cta-buttons">
+        <a href="#contact" class="cta cta-primary">Claim Free Audit</a>
+        <a href="https://calendly.com/adediniridwan/30min" target="_blank" class="cta cta-secondary">Book a strategy section</a>
+    </section>
+
+    <!-- FAQ Section (Dropdowns) -->
+    <section class="faq">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-dropdowns">
+            <select class="faq-select" onchange="showAnswer(this)">
+                <option value="">Select a Question</option>
+                <option value="qa1">What is marketing automation?</option>
+                <option value="qa2">How can email marketing benefit my business?</option>
+                <option value="qa3">What does CRM stand for?</option>
+                <option value="qa4">How do I get started?</option>
+                <option value="qa5">Do you work full time?</option>
+                <option value="qa6">Are you an Agency?</option>
+            </select>
+            <div id="qa1" class="faq-answer">Marketing automation involves using software to automate repetitive marketing tasks, such as email campaigns and lead nurturing.</div>
+            <div id="qa2" class="faq-answer">Email marketing helps engage your audience, drive conversions, and build long-term customer relationships through targeted campaigns.</div>
+            <div id="qa3" class="faq-answer">CRM stands for Customer Relationship Management, a system to manage interactions with current and potential customers.</div>
+            <div id="qa4" class="faq-answer">Contact me for a free audit or schedule a meeting to discuss your needs.</div>
+            <div id="qa5" class="faq-answer">Yes, i work full time as an in house team member</div>
+            <div id="qa6" class="faq-answer">No, I currently work as a single entity but I work with other creatives if there are services i need to execute outside my expertise </div>
+
+            
+        </div>
+    </section>
+
+    <!-- Contact Form Section -->
+<section class="contact" id="contact">
+  <h2>Claim Free Audit</h2>
+  <form
+  action="https://formspree.io/f/mldlyeka"
+  method="POST"
+>
+  <input type="text" placeholder="Name" name="Name" required>
+    <input type="email" placeholder="Email" name="email" required>
+    <textarea name="message" placeholder="write a message" rows="5" required></textarea>
+  <!-- your other form fields go here -->
+  <button type="submit">Claim Free Audit</button>
+</form>
+</section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2025 Ridwansells. All rights reserved.</p>
+        <div class="social-links">
+            <a href="https://linkedin.com/yourprofile" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://twitter.com/yourprofile" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://instagram.com/yourprofile" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://facebook.com/yourprofile" target="_blank"><i class="fab fa-facebook"></i></a>
+        </div>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
